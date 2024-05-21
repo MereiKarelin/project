@@ -1,0 +1,149 @@
+.home-mobile-slider {
+  height: 100vh;
+  overflow: hidden;
+
+  &__slider {
+    display: block;
+    margin: 0;
+    overflow: hidden;
+    padding: 0;
+    position: relative;
+
+    .slick-list {
+      overflow: hidden;
+    }
+
+    .slick-track {
+      display: flex;
+    }
+  }
+
+  &__splash-screen {
+    position: absolute;
+    z-index: 20;
+    height: 100%;
+    left: 0;
+    top: 0;
+    width: 100%;
+    background-color: #24292E;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: splashScreenAnimation 2s forwards;
+
+    svg {
+      height: 25%;
+      width: 80%;
+      padding-bottom: 40px;
+      animation: logoAnimation 0.8s forwards;
+    }
+  }
+
+  &__slide {
+    padding: 52px 20px 72px 20px;
+    height: 100vh;
+    background-color: #FFF;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    &-exit {
+      display: flex;
+      justify-content: flex-end;
+
+      &-button {
+        background: #8EE4BA;
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+    }
+
+    &_first {
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+      background-color: #24292E;
+    }
+  }
+
+  &__footer {
+    margin-top: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__dots {
+    display: flex;
+    align-items: center;
+  }
+
+  &__dot {
+    width: 13px;
+    height: 6px;
+    border-radius: 10px;
+    margin-right: 3px;
+    background: #8EE4BA;
+
+    &:last-child {
+      margin-right: 0;
+    }
+
+    &_active {
+      background: #FF3951;
+    }
+  }
+
+  &__title {
+    color: #252525;
+    font-size: 36px;
+    font-weight: 800;
+  }
+
+  &__subtitle {
+    color: #53B483;
+    font-size: 24px;
+    font-weight: 300;
+  }
+
+
+  &__button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    background-color: #8EE4BA;
+    border-radius: 50%;
+    cursor: pointer;
+  }
+
+}
+
+@keyframes logoAnimation {
+  0% {
+    transform: translateY(-200px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes splashScreenAnimation {
+  0% {
+    transform: translateY(0);
+  }
+
+  70% {
+    transform: translateY(0);
+  }
+
+  100% {
+    transform: translateY(-100%);
+  }
+}

@@ -1,0 +1,36 @@
+.swiper {
+  width: 36px;
+  height: 20px;
+  padding: 2px;
+  flex-shrink: 0;
+  border-radius: 100px;
+  position: relative;
+}
+
+.circle {
+  width: 16px;
+  height: 16px;
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  //background-color: white;
+  border-radius: 100%;
+  fill: var(--primary-white, #FFF);
+  filter: drop-shadow(0px 2px 5px rgba(103, 110, 118, 0.08)) drop-shadow(0px 1px 1px rgba(0, 0, 0, 0.12));
+  transition: all 0.2s;
+
+  &.circleActive {
+    position: absolute;
+    top: 2px;
+    left: 18px;
+  }
+}
+
+
+.swiperActive {
+  width: 36px;
+  height: 20px;
+  padding: 2px;
+  flex-shrink: 0;
+  border-radius: 100px;
+}

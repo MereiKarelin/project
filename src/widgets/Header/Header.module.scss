@@ -1,0 +1,115 @@
+.navBtn {
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background 0.5s ease;
+  color: #FFF;
+
+  font-family: Inter;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 23px; /* 153.333% */
+  &:hover {
+    border-radius: 10px;
+    background: linear-gradient(180deg, rgba(197, 204, 222, 0.09) 0%, rgba(209, 219, 230, 0.00) 100%);
+  }
+}
+
+.buttonSignup {
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background 1s ease-in-out;
+  color: #FFF;
+  font-family: Inter;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 23px; /* 153.333% */
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.10);
+  box-shadow: 0px 10px 10px 0px rgba(0, 0, 0, 0.10), 0px 0px 5px 0px #FFACE4 inset, 0px -1px 8px 0px #9375B6 inset;
+
+  &:hover {
+    border-radius: 10px;
+    background: linear-gradient(180deg, rgba(254, 200, 241, 0.90) 0%, rgba(237, 146, 215, 0.00) 40.39%), radial-gradient(96.63% 140.33% at 76.68% 66.67%, rgba(47, 148, 97, 0.50) 0%, rgba(83, 180, 131, 0.50) 100%);
+    background-blend-mode: overlay, normal;
+    box-shadow: 0px 10px 10px 0px rgba(0, 0, 0, 0.10), 0px 0px 5px 0px #FFACE4 inset, 0px -1px 8px 0px #9375B6 inset;
+  }
+}
+
+.container {
+}
+
+.containerMobile {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .container {
+    display: none;
+  }
+  .containerMobile {
+    width: 100%;
+    display: block;
+  }
+  .burger {
+    position: relative;
+
+    .menuButton {
+      display: block;
+      width: 25px;
+      height: 3px;
+      margin: 5px auto;
+      transition: all 0.3s ease;
+      background: #FFF;
+      border-radius: 5px;
+      z-index: 100;
+    }
+
+    &.open {
+      .menuButton:nth-child(2) {
+        opacity: 0;
+      }
+
+      .menuButton:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+      }
+
+      .menuButton:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+      }
+    }
+  }
+
+  .navbar {
+    transition: all 0.3s ease;
+    position: absolute;
+    overflow: hidden;
+    pointer-events: none;
+    left: 100%;
+    width: 0;
+    height: 0;
+
+    &.open {
+      opacity: 1;
+      pointer-events: auto;
+      display: block;
+      width: 100%;
+      height: auto;
+      position: fixed;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      background: linear-gradient(180deg, #000 0%, #0B1531 100%);
+    }
+
+
+  }
+
+
+}

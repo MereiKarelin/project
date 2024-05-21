@@ -1,0 +1,46 @@
+.container {
+  background-color: rgba(0, 0, 0, 0.5);
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: fixed;
+}
+
+.wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+.content {
+  min-width: 250px;
+  min-height: 170px;
+  background: white;
+  color: white;
+  z-index: 10;
+  //border-radius: 16px;
+  box-shadow: 0 5px 20px 0 rgba(0, 0, 0, 0.04);
+}
+
+.full {
+  height: 100%;
+}
+
+@media (max-width: 768px) {
+  .container {
+    background: none;
+    position: static;
+  }
+
+  .content {
+    border-radius: 0;
+    box-shadow: none;
+  }
+
+  .wrapper {}
+}
